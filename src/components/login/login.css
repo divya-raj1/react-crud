@@ -1,0 +1,22 @@
+.login-form {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ced4da;
+    border-radius: 10px;
+    width: 50%;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* for smaller screens */
+
+@media screen and (max-width: 540px) {
+    .login-form {
+        width: 80%;
+    }
+}
