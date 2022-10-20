@@ -7,8 +7,8 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login/>} />
-          <Route path="/" element={<Login/>} />
+          <Route path="/react-crud/login" element={<Login/>} />
+          <Route path="/react-crud/" element={<Login/>} />
           <Route exact path="/users" element={<User/>} />
         </Routes>
     </BrowserRouter>

@@ -33,7 +33,7 @@ export default function Sidebar({ getUsers }) {
             <span className="material-icons">help</span>
             <span className="confirm-text">Are you sure you want to log out?</span>
             <div>
-              <Button className="logout-confirm" onClick={() => navigate("/login")}>Yes</Button>
+              <Button className="logout-confirm" onClick={() => navigate("/react-crud/login")}>Yes</Button>
               <Button onClick={handleClose}>Cancel</Button>
             </div>
            </div>
