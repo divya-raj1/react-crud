@@ -79,7 +79,7 @@ export let users =[
 export const fetchUsers = () => {
     return (new Promise((resolve, reject) => {
         if(!users){
-            return reject(new Error('No user found'));
+            reject(new Error('No user found'));
         }
         else {
             setTimeout(resolve(Object.values(users)), 250);
@@ -91,7 +91,7 @@ export const fetchUsers = () => {
 export const addUser = (email, username) => {
     return (new Promise((resolve, reject) => {
         if (!email || !username) {
-          return reject(new Error('Please provide email and username'));
+            reject(new Error('Please provide email and username'));
         }
         else {
             const userId = faker.datatype.uuid().slice(0, 8);
@@ -99,9 +99,9 @@ export const addUser = (email, username) => {
             const newUser = { userId, username, email, avatar};
         
             users.push(newUser);
-            return setTimeout(resolve(true), 250);
+            setTimeout(resolve(true), 250);
         }
-      }));
+    }));
 }
 
 //function for editing a user
@@ -116,7 +116,7 @@ export const editUser = (id, name, email) => {
             }
         })
         if(count === 0) {
-            return reject(new Error('Not valid'));
+            reject(new Error('Not valid'));
         } else {
             setTimeout(resolve(true), 250);
         }
@@ -127,7 +127,7 @@ export const editUser = (id, name, email) => {
 export const deleteUser = (id) => {
     return (new Promise((resolve, reject) => {
         if(!id) {
-            return reject(new Error('No users selected'));
+            reject(new Error('No users selected'));
         }
         else if (Array.isArray(id)) {
             for (var i = 0; i < Object.values(users).length; i++) {
